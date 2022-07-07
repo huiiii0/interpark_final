@@ -1,0 +1,433 @@
+/*카테고리밑 소카테고리*/
+#cateWrap {width:100%; height:20px;}
+#cate {width:980px; height:100%; margin:0 auto; border-bottom:1px solid #aaa;}
+#cate ul {display:flex; flex-flow:row wrap; justify-content:space-around; width:30%;}
+#cate ul li {color:#666; font-size:10px;}
+#cate ul li a {text-decoration:none; color:#666;}
+
+/*책제목*/
+#bookInfoWrap {width:100%; height:750px; margin:15px 0 0 0; position:relative;}
+
+#bigViewWrap {width:690px; height:660px; background:rgba(0,0,0,0.8); position:absolute; left:50%; transform:translateX(-30%); z-index:3; top:11%; display:flex; flex-flow:row wrap; display:none;}
+#bigViewWrap .imgbox {width:100%; height:70%; display:flex; flex-flow:row wrap; justify-content:center;}
+#bigViewWrap .boxTxt {width:100%; height:30%; display:flex; flex-flow:row wrap; justify-content:center; align-items:center; text-align:center}
+#bigViewWrap .boxTxt h1 {width:100%; color:#fff;}
+#bigViewWrap .boxTxt p {color:#fff;}
+
+#bookInfo {width:980px; height:100%; margin:0 auto;}
+#bookInfo .bookTitle {width:100%; height:11%; border-bottom:1px solid #333; display:flex; flex-flow:row wrap;}
+#bookInfo .bookTitle h1 {width:100%; font-size:25px; display:flex; flex-flow:row wrap; align-items:flex-end; justify-content:space-between;}
+#bookInfo .bookTitle h1 a img {margin:0 10px 0 0;}
+#bookInfo .bookTitle p {font-size:10px; line-height:1px;}
+#bookInfo .bookTitle span {border:none; font-size:5px; width:45px; height:15px; border:1px solid #aaa; margin:-7px 0 0 7px; color:#aaa}
+
+#bookInfo .bookproduct {width:100%; height:89%;}
+#bookInfo .bookproduct .box1 {width:100%; height:70%; display:flex; flex-flow:row wrap;}
+#bookInfo .bookproduct .box1 .book {width:30%; height:100%;}
+#bookInfo .bookproduct .box1 .book .imgbox {width:100%; height:65%; display:flex; flex-flow:row wrap; align-items:center;}
+#bookInfo .bookproduct .box1 .book .imgbox img {width:60%; height:70%; margin:0 0 0 60px}
+#bookInfo .bookproduct .box1 .book .btnbox {width:100%; height:10%; display:flex; flex-flow:row wrap; justify-content:space-around; align-content:center;}
+#bookInfo .bookproduct .box1 .book .btnbox .btn {width:40%; height:90%; background:#eee; display:flex; flex-flow:row wrap; justify-content:center; align-content:center; font-size:12px; border:1px solid #aaa}
+#bookInfo .bookproduct .box1 .book .btnbox .btn:hover {cursor: pointer;}
+#bookInfo .bookproduct .box1 .book .btnbox .btn img {width:15px; height:15px;}
+#bookInfo .bookproduct .box1 .book .boxWrap {width:100%; height:25%; display:flex; flex-flow:row wrap; justify-content:center;}
+#bookInfo .bookproduct .box1 .book .boxWrap .box {width:90%; height:30%; background:#eee; margin:2px 0 0 0; display:flex; flex-flow:row wrap; justify-content:center; align-items:center;}
+#bookInfo .bookproduct .box1 .book .boxWrap .box img {margin:0 0 0 5px;}
+#bookInfo .bookproduct .box1 .book .boxWrap .box .icon {width:20px; height:20px;}
+#bookInfo .bookproduct .box1 .book .boxWrap .box a {text-decoration:none; color:#999}
+#bookInfo .bookproduct .box1 .book .boxWrap .box a p {font-size:12px;}
+#bookInfo .bookproduct .box1 .book .boxWrap .box p span {color:#e15148;}
+
+#bookInfo .bookproduct .box1 .bookinfo {width:70%; height:100%;}
+#bookInfo .bookproduct .box1 .bookinfo .imgbox {width:99%; height:10%; margin:0 auto; margin:10px 0;}
+#bookInfo .bookproduct .box1 .bookinfo .imgbox img {width:100%; height:100%;}
+#bookInfo .bookproduct .box1 .bookinfo .infocate {width:100%; height:10%;}
+#bookInfo .bookproduct .box1 .bookinfo .infocate ul {display:flex; flex-flow:row wrap; justify-content:space-evenly;}
+#bookInfo .bookproduct .box1 .bookinfo .infocate ul li {font-size:12px; margin:10px 0 0 0;}
+#bookInfo .bookproduct .box1 .bookinfo .infocate ul li a {text-decoration:none; color:#666}
+#bookInfo .bookproduct .box1 .bookinfo .infocate ul li a:hover {text-decoration:underline;}
+
+#bookInfo .bookproduct .box1 .bookinfo .productinfo {width:100%; height:90%;}
+#bookInfo .bookproduct .box1 .bookinfo .productinfo ul {display:flex; flex-flow:row wrap; justify-content:start;}
+#bookInfo .bookproduct .box1 .bookinfo .productinfo ul li {display:flex; flex-flow:row wrap; margin:10px 20px 0 0px; font-size:12px;}
+#bookInfo .bookproduct .box1 .bookinfo .productinfo ul li span {font-size:12px;}
+#bookInfo .bookproduct .box1 .bookinfo .productinfo ul li a {text-decoration:none; color:#000; display:flex; flex-flow:row wrap;font-size:12px;}
+#bookInfo .bookproduct .box1 .bookinfo .productinfo ul li a p {font-size:12px}
+#bookInfo .bookproduct .box1 .bookinfo .productinfo ul li h4 {font-size:14px}
+#bookInfo .bookproduct .box1 .bookinfo .productinfo ul li h5 {font-size:12px;}
+#bookInfo .bookproduct .box1 .bookinfo .productinfo ul li a i {color:#e15148}
+
+#bookInfo .bookproduct .box1 .bookinfo .productinfo button {margin:20px 10px 0 0; border:none; color:#666;}
+#bookInfo .bookproduct .box1 .bookinfo .productinfo button:nth-of-type(1) {background:#707070; color:#fff; width:140px; height:40px;}
+#bookInfo .bookproduct .box1 .bookinfo .productinfo button:nth-of-type(2) {background:#e15148; color:#fff; width:140px; height:40px;}    
+#bookInfo .bookproduct .box1 .bookinfo .productinfo button:nth-of-type(3) {width:40px; height:40px;}
+
+
+#bookInfo .bookproduct .box1 .bookinfo .productinfo .pricebox {display:flex; flex-flow:column wrap; width:150px; height:100px; border:1px solid #e15148; border-top:3px solid #e15148; margin:10px 0; position:relative; cursor:pointer;}
+#bookInfo .bookproduct .box1 .bookinfo .productinfo .pricebox i {position:absolute; margin:90px 0 0 60px; color:#e15148}
+#bookInfo .bookproduct .box1 .bookinfo .productinfo .pricebox li {display:flex; flex-flow:row wrap;}
+#bookInfo .bookproduct .box1 .bookinfo .productinfo .pricebox li h4 {font-size:15px;}
+#bookInfo .bookproduct .box1 .bookinfo .productinfo .pricebox li span {color:#e15148; font-size:15px; font-weight:bold;}
+
+
+
+#bookInfo .bookproduct .box2 {width:100%; height:20%; display:flex; flex-flow:row wrap; margin:40px 0 0 0;}
+#bookInfo .bookproduct .box2 .eventcate {width:150px; height:143px; display:flex; flex-flow:row wrap; align-content:space-between;}
+#bookInfo .bookproduct .box2 .eventcate .box {width:100%; height:33.33%; background:#ddd; display:flex; flex-flow:row wrap; justify-content:center; align-content: center; border:1px solid #aaa;}
+#bookInfo .bookproduct .box2 .eventcate .box:nth-of-type(1) {border-right:none; background:#fff}
+#bookInfo .bookproduct .box2 .eventcate .box:hover {cursor: pointer;}    
+#bookInfo .bookproduct .box2 .eventcate .box p {font-size:12px;}
+
+#bookInfo .bookproduct .box2 .slideWrap {width:565px; height:143px; background:#fff; position:relative; overflow:hidden; border:1px solid #aaa; border-left:none;}
+#bookInfo .bookproduct .box2 .slideWrap span {position: absolute; top:50%; display: block; font-size: 38px; color:#ccc; line-height: 40px; cursor: pointer; height: 50px; transform: translateY(-50%);}
+#bookInfo .bookproduct .box2 .slideWrap span:hover {color:#666}
+#bookInfo .bookproduct .box2 .slideWrap .eventprev {left:0;}
+#bookInfo .bookproduct .box2 .slideWrap .eventnext {right:0;}
+
+#bookInfo .slideWrap .eventslide {width:3000px;}
+#bookInfo .slideWrap .eventslide li {width:250px; height:120px; background:rgb(247, 246, 246); float:left; margin:10px;}
+#bookInfo .slideWrap .eventslide li .imgbox {width:100%; height:60%;}
+#bookInfo .slideWrap .eventslide li .imgbox img {width:100%; height:100%}
+#bookInfo .slideWrap .eventslide li .boxTxt {width:100%; height:40%;}
+#bookInfo .slideWrap .eventslide li .boxTxt h4 {font-size:10px;}
+#bookInfo .slideWrap .eventslide li .boxTxt h4 a {text-decoration:none; color:#000;}
+#bookInfo .slideWrap .eventslide li .boxTxt h4 a:hover {text-decoration:underline;}
+#bookInfo .slideWrap .eventslide li .boxTxt p {font-size:10px; margin:10px 0 0 0;}
+
+#bookInfo .bookproduct .box2 .adbox {width:265px; height:143px; background:green;}
+#bookInfo .bookproduct .box2 .adbox img {width:100%; height:100%;}
+
+/*책정보 네비*/
+#cateNavWrap1 {width:100%; height:50px; margin:80px 0 60px 0;}
+.cateNav {width:980px; height:100%; margin:0 auto; display:flex; flex-flow:row wrap; background:violet}
+.cateNav a {text-decoration:none; color:#000; font-weight:bold; font-size:12px}
+.cateNav a button {width:196px; height:50px; background:#ddd; border:1px solid #eee;}
+.cateNav a button:hover {background:#e15148; color:#fff;}
+#cateNavWrap1 .cateNav a .box1 {background:#e15148; color:#fff;}
+
+
+
+/*책정보*/
+#proFieldWrap {width:100%; height:80px; margin:60px 0 0 0;}
+#proField {width:980px; height:100%; margin:0 auto;}
+#proField .box {width:100%; height:50%;}
+#proField .box h1 {font-size:20px; margin:0 0 0 20px;}
+#proField .box ul {display:flex; flex-flow:row wrap; margin:0 0 0 20px;}
+#proField .box ul li {color:#666; font-size:12px; margin:0 15px 0 0;}
+#proField .box ul li a {text-decoration:none; color:#666; font-size:12px;}
+#proField .box ul li a:hover {text-decoration:underline;}
+#proField .box:nth-of-type(1) {border-bottom:1px solid #ccc; display:flex; flex-flow:row wrap; align-items:flex-end;}
+
+/*라이브북*/
+#liveBookWrap {width:100%; height:600px; margin:60px 0 0 0;}
+#liveBook {width:980px; height:100%; margin:0 auto;}
+#liveTitle {width:100%; height:5%; border-bottom:1px solid #ccc; display:flex; flex-flow:row wrap; align-items:flex-end;}
+#liveTitle h1 {font-size:20px; margin:0 0 0 20px;}
+
+#liveBody {width:100%; height:95%; display:flex; flex-flow:row wrap;}
+#liveBody .box1 {width:55%; height:100%; display:flex; flex-flow:row wrap; justify-content:center; align-items:center; position:relative;}
+#liveBody .box1 .slideWrap {width:400px; height:370px; position:relative; overflow:hidden;}
+#liveBody .box1 .slideWrap .liveslide {width:3700px;}
+#liveBody .box1 .slideWrap .liveslide li {width:400px; height:370px; float:left;}
+#liveBody .box1 .slideWrap .liveslide li img {width:100%; height:100%;}    
+#liveBody .box1 span {position: absolute; top:50%; display: block; font-size: 38px; color:#ccc; line-height: 40px; cursor: pointer; height: 50px; transform: translateY(-50%);}
+#liveBody .box1 span:hover {color:#333}
+#liveBody .box1 .liveprev {left:10px;}
+#liveBody .box1 .livenext {right:10px;}
+
+#liveBody .box2 {width:45%; height:100%; display:flex; flex-flow:row wrap; justify-content:center; align-items:center;}
+#liveBody .box2 .imgboxWrap {width:70%; height:60%; display:flex; flex-flow:row wrap; justify-content:center; align-content:center;}
+#liveBody .box2 .imgboxWrap .imgbox {width:32%; height:32%; margin:1px}
+#liveBody .box2 .imgboxWrap .imgbox img {width:100%; height:100%;}
+
+/*책소개*/
+#introBookWrap {width:100%; height:150px; margin:60px 0 0 0}
+#introTitle {width:980px; height:40px; border-bottom:1px solid #ccc; display:flex; flex-flow:row wrap; align-items:flex-end; margin:0 auto;}
+#introTitle h1 {font-size:20px; margin:10px 0 0 20px}
+#introBook {width:980px; height:110px; margin:0 auto; position:relative; overflow:hidden; padding:20px;}
+#introBook p {font-size:15px; color:#666; line-height:30px;}
+
+#introBook span {font-size:12px; position:absolute; right:0; bottom:0;}
+#introBook span:hover {cursor: pointer;}
+#introBook span i {color:#e15148}
+#introBook .up {display:none;}
+
+.toggleWrap {width:100%; height:30px;}
+.toggleWrap .toggleBtn1 {width:980px; height:100%; margin:0 auto; position:relative;}
+.toggleBtn1 span {font-size:12px; position:absolute; right:0; bottom:0;}
+.toggleBtn1 span:hover {cursor: pointer;}
+.toggleBtn1 span i {color:#e15148}
+.toggleBtn1 .up {display:none;}
+
+/*출판사서평*/
+#seopWrap {width:100%; height:150px; margin:60px 0 0 0;}
+#seopTitle {width:980px; height:40px; display:flex; flex-flow:row wrap; align-items:flex-end; border-bottom:1px solid #ccc; margin:0 auto;}
+#seopTitle h1 {font-size:20px; margin:10px 0 0 20px;}
+#seop {width:980px; height:110px; margin:0 auto; display:flex; flex-flow:row wrap; position:relative; overflow:hidden; padding:20px;}
+#seop p {font-size:15px; color:#666; line-height:30px;}
+
+.toggleWrap {width:100%; height:30px;}
+.toggleWrap .toggleBtn2 {width:980px; height:100%;margin:0 auto; position:relative;}
+.toggleBtn2 span {font-size:12px; position:absolute; right:0; bottom:0;}
+.toggleBtn2 span:hover {cursor: pointer;}
+.toggleBtn2 span i {color:#e15148}
+.toggleBtn2 .up {display:none;}
+
+/*목차*/
+#listWrap {width:100%; height:150px; margin:60px 0 0 0;}
+#listTitle {width:980px; height:40px; display:flex; flex-flow:row wrap; align-items:flex-end; border-bottom:1px solid #ccc; margin:0 auto;}
+#listTitle h1 {font-size:20px; margin:10px 0 0 20px;}
+#list {width:980px; height:110px; margin:0 auto; display:flex; flex-flow:row wrap; position:relative; overflow:hidden; padding:20px;}
+#list li {font-size:15px; color:#666}
+
+.toggleWrap {width:100%; height:30px;}
+.toggleWrap .toggleBtn3 {width:980px; height:100%; margin:0 auto; position:relative;}
+.toggleBtn3 span {font-size:12px; position:absolute; right:0; bottom:0;}
+.toggleBtn3 span:hover {cursor: pointer;}
+.toggleBtn3 span i {color:#e15148}
+.toggleBtn3 .up {display:none;}
+
+/*본문중에서*/
+#articleWrap {width:100%; height:150px; margin:60px 0 0 0;}
+#articleTitle {width:980px; height:40px; display:flex; flex-flow:row wrap; align-items:flex-end; border-bottom:1px solid #ccc; margin:0 auto;}
+#articleTitle h1 {font-size:20px; margin:10px 0 0 20px;}
+#article {width:980px; height:110px; margin:0 auto; display:flex; flex-flow:row wrap; position:relative; overflow:hidden; padding:20px;}
+#article p {font-size:15px; color:#666; line-height:30px;}
+
+.toggleWrap {width:100%; height:30px;}
+.toggleWrap .toggleBtn4 {width:980px; height:100%; margin:0 auto; position:relative;}
+.toggleBtn4 span {font-size:12px; position:absolute; right:0; bottom:0;}
+.toggleBtn4 span:hover {cursor: pointer;}
+.toggleBtn4 span i {color:#e15148}
+.toggleBtn4 .up {display:none;}
+
+/*관련이미지*/
+#relateImgWrap {width:100%; height:3557px; margin:60px 0 0 0;}
+#relateImg {width:980px; height:100%; margin:0 auto; display:flex; flex-flow:row wrap;}
+#relateImg .relateImgTitle {width:100%; height:1%; display:flex; flex-flow:row wrap; align-items:flex-end; border-bottom:1px solid #ccc;}
+#relateImg .relateImgTitle h1 {font-size:20px; margin:10px 0 0 20px}
+#relateImg .relateImgBody {width:100%; height:99%; display:flex; flex-flow:row wrap;}
+#relateImg .relateImgBody img {padding:20px;}
+
+/*저자소개*/
+#introAuthorWrap {width:100%; height:800px; margin:60px 0 0 0;}
+#introAuthor {width:980px; height:100%; margin:0 auto; display:flex; flex-flow:row wrap;}
+#introAuthor .authorTitle {width:100%; height:5%; border-bottom:1px solid #ccc; margin:0 0 20px 0;}
+#introAuthor .authorTitle h1 {font-size:20px; margin:10px 0 0 20px;}
+#introAuthor .authorBody {width:100%; height:95%;  display:flex; flex-flow:row wrap; align-content:space-around;}
+#introAuthor .authorBody .box1 {width:100%; height:17%;}
+#introAuthor .authorBody .box2 {width:100%; height:30%;}
+#introAuthor .authorBody .box3 {width:100%; height:17%;}
+#introAuthor .authorBody .box4 {width:100%; height:30%;}
+#introAuthor .authorBody .boxTitle {width:100%; height:17%; background:#eee; border:1px solid #ccc; display:flex; flex-flow:row wrap; align-items:center;}
+#introAuthor .authorBody .boxTitle h1 {font-size:15px; color:#333; margin:0 0 0 20px}
+#introAuthor .authorBody .boxTitle h2 {font-size:13px; color:#666; margin:0 0 0 20px}
+#introAuthor .authorBody .boxBody {width:100%; height:83%; display:flex; flex-flow:row wrap; border-bottom:1px solid #ccc;}    
+#introAuthor .authorBody .boxBody .box1 {width:30%; height:100%; border-right:1px solid #ccc;}
+#introAuthor .authorBody .boxBody .box1 ul {display:flex; flex-flow:row wrap; justify-content:space-between; padding:20px;}
+#introAuthor .authorBody .boxBody .box1 ul li {font-size:12px}
+#introAuthor .authorBody .boxBody .box2 {width:70%; height:100%; padding:20px}
+#introAuthor .authorBody .boxBody .box2 p {font-size:12px}
+
+#introAuthor .authorBody .boxBody1 {width:100%; height:83%; border-bottom:1px solid #ccc; display:flex; flex-flow:row wrap; justify-content:space-evenly; align-items:center;  border-left:1px solid #ccc; border-right:1px solid #ccc;}
+#introAuthor .authorBody .boxBody1 .box {width:16%; height:90%; display:flex; flex-flow:row wrap; justify-content:center;}
+#introAuthor .authorBody .boxBody1 .box img {width:70%; height:80%; margin:0 0 0 20px}
+#introAuthor .authorBody .boxBody1 .box h3 {font-size:10px; text-align:center} 
+#introAuthor .authorBody .boxBody2 {width:100%; height:83%; border-bottom:1px solid #ccc; display:flex; flex-flow:row wrap; justify-content:space-evenly; align-items:center;  border-left:1px solid #ccc; border-right:1px solid #ccc;}
+#introAuthor .authorBody .boxBody2 .box {width:16%; height:90%; display:flex; flex-flow:row wrap;}
+#introAuthor .authorBody .boxBody2 .box {width:16%; height:90%; display:flex; flex-flow:row wrap; justify-content:center;}
+#introAuthor .authorBody .boxBody2 .box img {width:70%; height:80%; margin:0 0 0 20px}
+#introAuthor .authorBody .boxBody2 .box h3 {font-size:10px; text-align:center} 
+
+/*이벤트/기획전 네비*/
+#cateNavWrap2 {width:100%; height:50px; margin:100px 0 60px 0;}
+.cateNav {width:980px; height:100%; margin:0 auto; display:flex; flex-flow:row wrap; background:violet}
+.cateNav a {text-decoration:none; color:#000; font-weight:bold; font-size:12px}
+.cateNav a button {width:196px; height:50px; background:#ddd; border:1px solid #eee;}
+.cateNav a button:hover {background:#e15148; color:#fff;}
+#cateNavWrap2 .cateNav a .box2 {background:#e15148; color:#fff;}
+
+
+/*이벤트/기획전*/
+#eventgWrap {width:100%; height:300px;}
+#eventg {width:980px; height:100%; margin:0 auto;}
+#eventg .eventgTitle {width:100%; height:15%;  border-bottom:1px solid #ccc; display:flex; flex-flow:row wrap; align-items:flex-end; margin:0 0 20px 0}
+#eventg .eventgTitle h1 {font-size:20px; margin:10px 0 0 20px}
+#eventg .eventgBody {width:100%; height:85%;}
+#eventg .eventgBody .box1 {width:100%; height:40%; display:flex; flex-flow:row wrap; align-items:center;}
+
+#eventg .eventgBody .box2 {width:100%; height:60%; display:flex; flex-flow:row wrap; align-items:center; justify-content:space-around; margin:20px 0 0 0}
+
+#eventg .eventgBody .box2 .event1 {width:49%; height:75%; display:flex; flex-flow:row wrap; align-content:center;}
+#eventg .eventgBody .box2 .event1 .event1Title {width:100%; height:20%; border-bottom:1px solid #ccc;}
+#eventg .eventgBody .box2 .event1 .event1Title h1 {font-size:12px; color:#666}
+#eventg .eventgBody .box2 .event1 .box {width:100%; height:48%;  display:flex; flex-flow:row wrap; padding:5px}
+#eventg .eventgBody .box2 .event1 .box .listBox {width:50%; height:100%; padding:5px;}
+#eventg .eventgBody .box2 .event1 .box .listBox button {border:none; width:43px; height:20px; background:yellowgreen; font-size:1px; border-radius:5px; color:#fff;}
+#eventg .eventgBody .box2 .event1 .box .listBox li {font-size:10px;}
+#eventg .eventgBody .box2 .event1 .box p {font-size:10px; margin:20px 0 0 0;}
+
+#eventg .eventgBody .box2 .event2 {width:49%; height:75%; display:flex; flex-flow:row wrap; align-content:center;}
+#eventg .eventgBody .box2 .event2 .event2Title {width:100%; height:20%; border-bottom:1px solid #ccc;}
+#eventg .eventgBody .box2 .event2 .event2Title h1 {font-size:12px; color:#666}
+#eventg .eventgBody .box2 .event2 .box {width:100%; height:48%; display:flex; flex-flow:row wrap; padding:5px}
+#eventg .eventgBody .box2 .event2 .box .listBox {width:50%; height:100%; padding:5px;}
+#eventg .eventgBody .box2 .event2 .box .listBox button {border:none; width:43px; height:20px; background:yellowgreen; font-size:1px; border-radius:5px; color:#fff;}
+#eventg .eventgBody .box2 .event2 .box .listBox li {font-size:10px;}
+#eventg .eventgBody .box2 .event2 .box p {font-size:10px; margin:20px 0 0 0;}
+
+/*추천도서 네비*/
+#cateNavWrap3 {width:100%; height:50px; margin:100px 0 60px 0;}
+.cateNav {width:980px; height:100%; margin:0 auto; display:flex; flex-flow:row wrap; background:violet}
+.cateNav a {text-decoration:none; color:#000; font-weight:bold; font-size:12px}
+.cateNav a button {width:196px; height:50px; background:#ddd; border:1px solid #eee;}
+.cateNav a button:hover {background:#e15148; color:#fff;}
+#cateNavWrap3 .cateNav a .box3 {background:#e15148; color:#fff;}
+
+
+/*추천도서*/
+#recomBookWrap {width:100%; height:900px;}
+#recomBook {width:980px; height:100%; margin:0 auto; display:flex; flex-flow:row wrap; align-content:space-between;}
+#recomBook .titleBox {width:100%; height:15%; display:flex; flex-flow:row wrap; align-items:flex-end; border-bottom:1px solid #ccc;}
+#recomBook .titleBox h1 {font-size:12px; color:#333; margin:10px 0 0 20px}
+
+#recomBook .recomBox1 {width:100%; height:33%;}
+#recomBook .recomBox1 .slideWrap {width:980px; height:252px; position:relative; overflow:hidden;}
+#recomBook .recomBox1 .slideWrap .bBslide1 {width:2000px;}
+#recomBook .recomBox1 .slideWrap .bBslide1 li {width:159px; height:248px; float:left; margin:2px; display:flex; flex-flow:row wrap; justify-content:center; padding:10px;}
+#recomBook .recomBox1 .slideWrap .bBslide1 li h3 {font-size:12px; text-align:center;}
+
+#recomBook .recomBox2 {width:100%; height:33%;}
+#recomBook .recomBox2 .slideWrap {width:980px; height:252px; position:relative; overflow:hidden;}
+#recomBook .recomBox2 .slideWrap .bBslide2 {width:2000px;}
+#recomBook .recomBox2 .slideWrap .bBslide2 li {width:159px; height:248px; float:left; margin:2px; display:flex; flex-flow:row wrap; justify-content:center; padding:10px;}
+#recomBook .recomBox2 .slideWrap .bBslide2 li h3 {font-size:12px; text-align:center;}
+
+#recomBook .recomBox3 {width:100%; height:33%;}
+#recomBook .recomBox3 .slideWrap {width:980px; height:252px; position:relative; overflow:hidden;}
+#recomBook .recomBox3 .slideWrap .bBslide3 {width:2000px;}
+#recomBook .recomBox3 .slideWrap .bBslide3 li {width:159px; height:248px; float:left; margin:2px; display:flex; flex-flow:row wrap; justify-content:center; padding:10px;}
+#recomBook .recomBox3 .slideWrap .bBslide3 li h3 {font-size:12px; text-align:center;}
+
+#recomBook .recomBox1 .slideWrap span {position: absolute; top:50%; display: block; font-size: 38px; color:#ccc; line-height: 40px; cursor: pointer; height: 50px; transform: translateY(-50%);}
+#recomBook .recomBox1 .slideWrap span:hover {color:#333;}
+#recomBook .recomBox1 .slideWrap .rbprev1 {left:0}
+#recomBook .recomBox1 .slideWrap .rbnext1 {right:0}
+
+#recomBook .recomBox2 .slideWrap span {position: absolute; top:50%; display: block; font-size: 38px; color:#ccc; line-height: 40px; cursor: pointer; height: 50px; transform: translateY(-50%);}
+#recomBook .recomBox2 .slideWrap span:hover {color:#333;}
+#recomBook .recomBox2 .slideWrap .rbprev2 {left:0}
+#recomBook .recomBox2 .slideWrap .rbnext2 {right:0}
+
+#recomBook .recomBox3 .slideWrap span {position: absolute; top:50%; display: block; font-size: 38px; color:#ccc; line-height: 40px; cursor: pointer; height: 50px; transform: translateY(-50%);}
+#recomBook .recomBox3 .slideWrap span:hover {color:#333;}
+#recomBook .recomBox3 .slideWrap .rbprev3 {left:0}
+#recomBook .recomBox3 .slideWrap .rbnext3 {right:0}
+
+/*기대평/리뷰 네비*/
+#cateNavWrap4 {width:100%; height:50px; margin:100px 0 60px 0;}
+.cateNav {width:980px; height:100%; margin:0 auto; display:flex; flex-flow:row wrap; background:violet}
+.cateNav a {text-decoration:none; color:#000; font-weight:bold; font-size:12px}
+.cateNav a button {width:196px; height:50px; background:#ddd; border:1px solid #eee;}
+.cateNav a button:hover {background:#e15148; color:#fff;}
+#cateNavWrap4 .cateNav a .box4 {background:#e15148; color:#fff;}
+
+
+/*리뷰*/
+#reviewWrap {width:100%; height:595px;}
+#reviewTitle {width:980px; height:50px; display:flex; flex-flow:row wrap; justify-content:space-between; border-bottom:1px solid #aaa; align-items:flex-end; margin:0 auto;}
+#reviewTitle h1 {font-size:20px; margin:10px 0 0 20px}
+#reviewTitle h1 i {color:gold; letter-spacing: -5px;}
+#reviewTitle h1 span {font-size:12px;}
+#reviewTitle p {font-size:10px; margin:20px 0 0 0; color:#e15148}
+#reviewTitle p button {border:none; background:#e15148; color:#fff; width:60px; height:20px; margin:0px 10px 10px 10px; font-weight:bold;}
+
+#review {width:980px; height:545px; margin:0 auto;}    
+#review .reviewBody {width:100%; height:100%;}
+
+#review .reviewBody .top {width:100%; height:5%; display:flex; flex-flow:row wrap;justify-content:end; border-bottom:1px solid #ccc; align-items:center;}
+#review .reviewBody .top li {font-size:12px; margin:4px 10px 4px 4px;}
+
+#review .reviewBody .middle {width:100%; height:90%;}
+#review .reviewBody .middle li {width:100%; height:100%;}
+#review .reviewBody .middle li .title {width:100%; height:3%; display:flex; flex-flow:row wrap; justify-content:space-between; align-items:center;}
+#review .reviewBody .middle li .title h3 {font-size:15px; color:#333; margin: 0 0 0 20px;}
+#review .reviewBody .middle li .title h3 i {color:gold; letter-spacing:-5px;}
+#review .reviewBody .middle li .title p {font-size:10px; margin:0 10px 0 0; color:#666}
+
+#review .reviewBody .middle li .content {width:100%; height:94%; position:relative; overflow:hidden; padding:20px;}
+#review .reviewBody .middle li .content p {font-size:12px;}
+
+#review .reviewBody .middle li .bot {width:100%; height:5%; display:flex; flex-flow:row wrap; justify-content:space-between; align-items:flex-end;}
+#review .reviewBody .middle li .bot p {font-size:12px; margin:0 0 0 20px}
+#review .reviewBody .middle li .bot button {border:none; background:#333; color:#fff;}
+
+#reviewBot {width:980px; height:45px; margin:0 auto; border-top:1px solid #000; border-bottom:1px solid #ccc; display:flex; flex-flow:row wrap; justify-content:end; background:#eee;}
+#reviewBot .box {width:65%; height:100%;  display:flex; flex-flow:row wrap; justify-content:space-between;}
+#reviewBot .box .numbox {width:40%; height:100%; display:flex; flex-flow:row wrap; justify-content:space-evenly;}
+#reviewBot .box .numbox .box {width:19%; height:100%; font-size:12px; letter-spacing:-2px; display:flex; flex-flow:row wrap; justify-content:center; align-items:center;}
+#reviewBot .box .numbox .box a {text-decoration:none; font-weight:bold; color:#333}
+#reviewBot .box .numbox .box:nth-of-type(3) {background:#333; color:#fff; font-size:12px; display:flex; flex-flow:row wrap; justify-content:center; align-items:center; cursor: pointer;}
+#reviewBot .box .boxTxt {width:10%; height:100%; font-size:12px; color:#666; display:flex; flex-flow:row wrap; justify-content:center; align-items:center;}
+
+/*기대평*/
+#expectTitle {width:980px; height:45px; margin:100px auto 0; border-bottom:1px solid #ccc; display:flex; flex-flow:row wrap; align-items:end;}
+#expectTitle h1 {font-size:20px; margin:10px 0 0 20px;}
+#expectWrap {width:100%; height:230px;}
+#expect {width:980px; height:100%; margin:0 auto; display:flex; flex-flow:row wrap; justify-content:center; align-items:center;}
+#expect .writeBox {width:100%; height:80%; background:#eee; display:flex; flex-flow:column wrap; justify-content: center; padding:20px; border:1px solid #aaa;}
+#expect .writeBox p {font-size:12px; margin:0 0 10px 0;}
+#expect .writeBox p i {letter-spacing:-5px; color:gold;}
+#expect .writeBox textarea {width:90%; height:60%;}
+#expect .writeBox button {width:100px; height:85px; margin:25px 0 0 0; background:#fff; border:1px solid #aaa; box-shadow:1px 1px 1px;}
+
+#expectTitle2 {width:980px; height:40px; margin:0 auto; display:flex; flex-flow:row wrap; align-items:flex-end;}
+#expectTitle2 h1 {font-size:17px; margin:10px 0 0 20px;}
+#expectTitle2 h1 i {color:#ccc}
+
+#expectWrap2 {width:100%; height:100px;}
+#expect2 {width:980px; height:100%; margin:0 auto; display:flex; flex-flow:row wrap; justify-content:center; align-items:center;}
+#expect2 .box {width:100%; height:90%; border-top:1px solid #aaa; border-bottom:1px solid #aaa; display:flex; justify-content:center; align-items:center;}
+#expect2 .box p {font-size:12px; color:#666}
+
+/*교환/환불 네비*/
+#cateNavWrap5 {width:100%; height:50px; margin:100px 0 60px 0;}
+.cateNav {width:980px; height:100%; margin:0 auto; display:flex; flex-flow:row wrap; background:violet}
+.cateNav a {text-decoration:none; color:#000; font-weight:bold; font-size:12px}
+.cateNav a button {width:196px; height:50px; background:#ddd; border:1px solid #eee;}
+.cateNav a button:hover {background:#e15148; color:#fff;}
+#cateNavWrap5 .cateNav a .box5 {background:#e15148; color:#fff;}
+
+
+#sellTitle1 {width:980px; height:40px; margin:60px auto 0; border-bottom:1px solid #ccc; display:flex; align-items:flex-end;}
+#sellTitle1 h1 {font-size:20px; margin:10px 0 0 20px;}
+
+#sellWrap1 {width:100%; height:300px;}
+#sell1 {width:980px; height:100%; margin:0 auto;}
+#sell1 p {font-size:12px; padding:20px; color:#666}
+
+#sell1 table {background:tomato; width:100%; height:80%;}
+#sell1 table td {padding:5px; font-size:12px; color:#666}
+#sell1 table td:nth-of-type(1) {background:#eee; border:1px solid #ccc}
+#sell1 table td:nth-of-type(2) {background:#fff; border:1px solid #ccc;}
+
+#sellTitle2 {width:980px; height:40px; margin:60px auto 0; border-bottom:1px solid #ccc; display:flex; align-items:flex-end;}
+#sellTitle2 h1 {font-size:20px; margin:10px 0 0 20px;}
+
+#sellWrap2 {width:100%; height:520px;}
+#sell2 {width:980px; height:100%; margin:0 auto;}
+
+#sell2 table {background:tomato; width:100%; height:80%; margin:10px 0 0 0;}
+#sell2 table td {padding:5px; font-size:12px; color:#666}
+#sell2 table td:nth-of-type(1) {background:#eee; border:1px solid #ccc}
+#sell2 table td:nth-of-type(2) {background:#fff; border:1px solid #ccc;}
+#sell2 h6 {margin:20px 0 0 0;}
+#sell2 p {font-size:12px; color:#666; padding:10px;}
+#sell2 p span:hover {text-decoration:underline; cursor: pointer;}
+
+#sellTitle3 {width:980px; height:40px; margin:60px auto 0; border-bottom:1px solid #ccc; display:flex; align-items:flex-end;}
+#sellTitle3 h1 {font-size:20px; margin:10px 0 0 20px;}
+
+#sellWrap3 {width:100%; height:180px;}
+#sell3 {width:980px; height:100%; margin:0 auto; padding:10px;}
+#sell3 li {font-size:12px; line-height:30px; color:#666}
